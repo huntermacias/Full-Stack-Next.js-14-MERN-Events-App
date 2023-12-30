@@ -15,7 +15,7 @@ const Header = () => {
             <Link href="/">
                 <Image
                   src="/assets/images/logo.svg" // Ensure the logo has high contrast for a dark theme
-                  alt="Evently"
+                  alt="Meetix"
                   width={150}
                   height={40}
                   className="opacity-90 hover:opacity-100 transition-opacity duration-200"
