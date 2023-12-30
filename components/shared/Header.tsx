@@ -2,7 +2,6 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Button } from "../ui/button";
 import NavItems from "./NavItems";
 import MobileNav from "./MobileNav";
 
@@ -35,10 +34,8 @@ const Header = () => {
               <MobileNav />
             </SignedIn>
             <SignedOut>
-              <Link href="/sign-in">
-                <a className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-black bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+              <Link href="/sign-in" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-black bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   Login
-                </a>
               </Link>
             </SignedOut>
           </div>
