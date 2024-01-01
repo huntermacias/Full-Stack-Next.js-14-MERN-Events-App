@@ -12,22 +12,20 @@ const NavItems = () => {
     <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:flex-row">
       {headerLinks.map((link) => {
         const isActive = pathname === link.route;
-
+        
         return (
           <li
             key={link.route}
             className={`${
-              isActive ? 'text-primary-500' : 'text-gray-400'
-            } flex items-center justify-center p-4 whitespace-nowrap`}
+              isActive && 'text-primary-500'
+            } flex-center p-medium-16 whitespace-nowrap`}
           >
-            <Link className={`${isActive ? 'underline' : ''}`} href={link.route}>
-				{link.label}
-            </Link>
+            <Link href={link.route}>{link.label}</Link>
           </li>
         )
       })}
     </ul>
-  );
+  )
 }
 
-export default NavItems;
+export default NavItems
